@@ -15,8 +15,9 @@ classDiagram
 
     class Task {
         +String id
-        +String name
+        +String title
         +String description
+        +String deadline
         +String status
     }
 
