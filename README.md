@@ -5,7 +5,7 @@ Java Restful API criada para o curso Claro Coding The Future Java com Spring de 
 ```mermaid
 classDiagram
     class User {
-        +String id
+        +Long id
         +String name
         +String email
         +String password
@@ -14,7 +14,7 @@ classDiagram
     }
 
     class Task {
-        +String id
+        +Long id
         +String title
         +String description
         +String deadline
