@@ -2,6 +2,7 @@ package me.dio.domain.model;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -30,7 +31,7 @@ public class UserModel {
 	private String birthDate;
 	
 	//@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<TaskModel> tasks;
 
 	public Long getId() {
