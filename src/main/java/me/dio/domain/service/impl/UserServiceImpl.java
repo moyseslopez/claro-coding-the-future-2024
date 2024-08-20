@@ -26,6 +26,8 @@ public class UserServiceImpl implements UserService {
 	public UserModel create(UserModel user) {
 		if(user.getId() != null && this.userRepository.existsById(user.getId())) {
 			throw new IllegalArgumentException("This User ID already exists.");
+		} else if(user.getEmail() != null && this.userRepository.existsByEmail(user.getEmail())) {
+			throw new IllegalArgumentException("This user email already exists.");
 		}
 		return this.userRepository.save(user);
 	}

@@ -8,4 +8,5 @@ import me.dio.domain.model.UserModel;
 @Repository
 public interface UserRepository extends JpaRepository<UserModel, Long>{
 
+	boolean existsByEmail(String email);
 }
